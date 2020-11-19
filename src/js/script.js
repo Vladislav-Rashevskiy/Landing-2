@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",() => {
         menu.classList.add("active")
         burgerButton.classList.add("active")
        }
-        
+        console.log("")
     })
 });
 
