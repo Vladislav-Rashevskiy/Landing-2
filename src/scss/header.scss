@@ -59,6 +59,7 @@
                 bottom: 0;
                 right: 0;
                 background: rgba($color: #000000, $alpha: 0.8);
+                z-index: 1;
             }
             &.active{
                 display: flex;
@@ -83,7 +84,7 @@
             height: 40px;
             top: 20px;
             right: 20px;
-            z-index: 1;
+            z-index: 2;
             @media (max-width: 600px) {
                 display: flex;
             }
