@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 5em;
+    margin-top: 3em;
     &-text {
         display: flex;
         width: 100%;
@@ -18,7 +18,7 @@
         justify-content: space-between;
         width: 50%;
         margin: auto;
-        margin-bottom: 5em;
+        margin-bottom: 3em;
         @media (max-width: 900px) {
             width: 60%;
         }
@@ -29,6 +29,7 @@
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
+            margin-bottom: 2em;
         }
         &__link {
             font-size: 1em;
@@ -55,6 +56,12 @@
             @media (max-width: 720px) {
                 width: 49%;
                 height: auto;
+                margin-bottom: 1.5em;
+            }
+            @media (max-width: 450px){
+                width: 100%;
+                height:auto;
+                margin-bottom: 1em;
             }
             &:hover {
                 .works-items__element_overlay {

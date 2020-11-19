@@ -5,6 +5,9 @@
         display: flex;
         flex-wrap: wrap;
         height: 48em;
+        @media (max-width: 480px) {
+           height: 30em;
+        }
     }
     &-navbar {
         display: flex;
