@@ -47,7 +47,7 @@ function styles() {
 function images() {
     return (
         src('./src/images/**/*')
-            .pipe(image())
+            // .pipe(image())
             .pipe(dest('./dist/images'))
             .pipe(browserSync.stream())
     )
@@ -65,11 +65,12 @@ function watchFiles() {
     watch('./src/scss/**/*.scss', styles);
     watch('./src/html/**/*.html', html);
     watch('./src/js/**/*.js', javascript);
+    watch('./src/images/**/*', images);
 }
 
 async function clean() {
     await del(['./dist']);
 }
 
-exports.default = series(clean, parallel(styles, html, javascript), watchFiles);
-exports.build = series(clean, parallel(styles, html, javascript));
+exports.default = series(clean, parallel(styles, html, javascript, images), watchFiles);
+exports.build = series(clean, parallel(images, styles, html, javascript));
